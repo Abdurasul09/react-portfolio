@@ -1,0 +1,132 @@
+@import "./.././../_veriables";
+@import "./../../_mixins";
+.contact {
+	.content {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		flex-wrap: wrap;
+		margin-top: 20px;
+
+		.row {
+			display: flex;
+			justify-content: center;
+			flex-direction: row;
+			flex-wrap: wrap;
+			background-color: #f6f6f6;
+		
+
+			.card {
+				color: #eee;
+				width: 240px;
+				margin: 20px;
+				padding: 25px;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+
+				&:hover {
+					.contact-icon {
+						transform: translateY(-10px);
+					}
+				}
+
+				.contact-icon {
+					color: $text-color;
+					font-size: 50px;
+					text-align: center;
+					transition: transform 0.5s ease;
+				}
+
+				.info {
+					text-align: center;
+
+					h3 {
+						color: #111;
+						font-size: 20px;
+						font-weight: 700;
+						margin: 10px;
+					}
+
+					span {
+						color: #666;
+						font-weight: 500;
+						padding-left: 10px;
+					}
+				}
+			}
+		}
+
+		.form-row {
+			.contact-form {
+				color: $text-color;
+				font-size: 25px;
+				font-weight: 600;
+				text-align: center;
+				margin-bottom: 40px;
+
+				h3{
+					padding-bottom: 50px;
+				}
+
+				.input-block {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+
+					.input-box {
+						position: relative;
+						width: 100%;
+						margin-bottom: 20px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						color: $gray;
+
+						.form-icon{
+							background-color: #f6f6f6;
+							padding: 14px;
+							font-size: 17px;
+						}
+						
+						input {
+							color: #111;
+							width: 87%;
+							padding: 15px;
+							font-size: 17px;
+							font-weight: 400;
+							outline: none;
+							background-color: #f6f6f6;
+							resize: none;
+							border: none;
+						}
+					}
+				}
+
+				.input-box {
+					position: relative;
+					width: 100%;
+					margin-bottom: 20px;
+
+					textarea {
+						color: #111;
+						width: 97.5%;
+						padding: 10px;
+						font-size: 17px;
+						font-weight: 400;
+						outline: none;
+						background-color: #f6f6f6;
+
+            border: none;
+						resize: none;
+						margin-bottom: 2rem;
+					}
+
+					.send-btn{
+						@include btn;
+					}
+				}
+			}
+		}
+	}
+}

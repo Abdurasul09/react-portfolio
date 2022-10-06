@@ -1,0 +1,140 @@
+@import "./../../_veriables";
+@import "./../../_mixins";
+
+.hero {
+	height: 90vh;
+
+	.content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 50rem;
+
+		.hero-title {
+			width: 900px;
+			display: grid;
+			grid-template-columns: 40px repeat(2, 2fr);
+			align-items: center;
+			column-gap: 6rem;
+			justify-content: space-between;
+
+			.description {
+				h1 {
+					color: $text-color;
+					font-size: 2rem;
+					font-weight: 600;
+					padding-bottom: 1rem;
+				}
+
+				h3 {
+					font-size: 1.2rem;
+					padding-bottom: 0.3rem;
+					font-weight: 500;
+					position: relative;
+					padding-left: 5.4rem;
+
+					&::after {
+						content: "";
+						position: absolute;
+						width: 70px;
+						height: 1px;
+						background-color: $text-color;
+						top: 0.7rem;
+						left: 0;
+					}
+				}
+
+				p {
+					font-size: 14px;
+					color: $gray;
+				}
+
+				.btn-bock {
+
+					.hero-btn {
+						text-align: center;
+						margin-top: 20px;
+						background: transparent;
+						border: 2px solid $gray;
+						padding: 10px 25px;
+						color: $gray;
+						border-radius: 4px;
+						font-size: 1.2rem;
+						cursor: pointer;
+						display: flex;
+						align-items: center;
+						transition: all 0.2s ease;
+
+						&:hover {
+							background-color: $text-color;
+							border-color: $text-color;
+							color: $white;
+						}
+
+						&:hover .icon-btn {
+							transform: rotate(90deg);
+						}
+
+						.icon-btn {
+							margin-left: 10px;
+							transition: all 0.2s ease;
+						}
+					}
+				}
+			}
+
+			.home-img {
+				background-image: url("./../../../../assets/home-img.png");
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				width: 320px;
+				height: 320px;
+				animation: animation-profile 8s ease-in-out infinite 1s;
+			}
+		}
+	}
+}
+
+
+@keyframes animation-profile {
+	0% {
+		border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+	}
+
+	50% {
+		border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+	}
+
+	100% {
+		border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+	}
+}
+
+
+// Media 
+
+@media (max-width: 576px) {
+	.hero {
+		.content {
+			.hero-title {
+				display: flex;
+				flex-direction: column-reverse;
+
+				.description {
+					text-align: center;
+					h3{
+						&::after{
+							left: 15%;
+						}
+					}
+					.btn-bock {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+				}
+			}
+		}
+	}
+}

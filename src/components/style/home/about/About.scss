@@ -1,0 +1,90 @@
+@import "./../../_mixins";
+.about {
+	padding: 60px 0;
+
+	.gTitleBlock {
+		padding: 80px;
+
+		.gTitle {
+			color: $text-color;
+			font-size: $size-gTitle;
+			text-align: center;
+			font-weight: 500;
+			position: relative;
+
+			&::after {
+				content: "";
+				position: absolute;
+				width: 100px;
+				height: 4px;
+				background-color: $text-color;
+				top: 70px;
+				left: 45%;
+			}
+		}
+	}
+
+	.content {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+
+		.left {
+			width: 45%;
+			display: flex;
+			justify-content: center;
+
+			img {
+				width: 350px;
+				height: 350px;
+				object-fit: cover;
+				border-radius: 1.5rem;
+				justify-self: center;
+			}
+		}
+
+		.right {
+			width: 45%;
+			padding: 0 20px;
+
+			.about-description {
+				margin-bottom: 2rem;
+				p {
+					font-size: $size-p;
+					color: $gray;
+				}
+			}
+
+
+			.btn {
+				@include btn;
+			}
+		}
+	}
+}
+
+
+// Media 
+
+
+@media screen and (max-width: 992px) {
+
+	.about{
+		.title{
+			padding: 40px;
+		}
+		.content{
+			display: block;
+			text-align: center;
+
+			.left{
+				margin-bottom: 2rem;
+				width: 100%;
+			}
+			.right{
+				width: 100%;
+			}
+		}
+	}
+	
+}

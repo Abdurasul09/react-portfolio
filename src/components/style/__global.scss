@@ -1,0 +1,82 @@
+@import "./_veriables";
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+body,
+html {
+	scroll-behavior: smooth;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+
+p {
+	line-height: 1.4;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 0.8rem;
+}
+
+
+
+.title {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 80px;
+
+	.section-title {
+		position: relative;
+		color: $text-color;
+		font-size: 3rem;
+		font-weight: 600;
+		margin-bottom: 60px;
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: 140px;
+			height: 4px;
+			background: $text-color;
+			top: 80px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 75px;
+			left: 50%;
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			background: $text-color;
+			transform: translateX(-50%);
+		}
+	}
+}
+
+
+

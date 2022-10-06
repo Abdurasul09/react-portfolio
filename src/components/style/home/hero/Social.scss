@@ -1,0 +1,25 @@
+@import "./../../_veriables";
+
+.social {
+
+	display: flex;
+	flex-direction: column;
+
+	.social-icon {
+		margin-bottom: 10px;
+		font-size: 1.25rem;
+		color: $gray;
+
+		&:hover {
+			color: $text-color;
+			cursor: pointer;
+		}
+	}
+}
+
+// media
+@media (max-width: 576px) {
+	.social {
+		display: none;
+	}
+}

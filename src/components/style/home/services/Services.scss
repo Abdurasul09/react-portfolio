@@ -1,0 +1,99 @@
+@import "./../../_veriables";
+
+.services {
+	padding-bottom: 8rem;
+	background-color: #f6f6f6;
+
+	.content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: row;
+		flex-wrap: wrap;
+
+		.info {
+			width: 270px;
+			padding: 3rem 2rem;
+			transition: all 0.3s ease;
+			position: relative;
+			cursor: pointer;
+
+			&:hover {
+				background-color: $white;
+			}
+
+			&:hover .info-btn {
+				transition: all 0.2s ease;
+				padding-left: 45px;
+				position: relative;
+
+				&::after {
+					content: "";
+					position: absolute;
+					width: 35px;
+					height: 1.5px;
+					background-color: $text-color;
+					top: 0.6rem;
+					left: 0;
+				}
+
+				&::before {
+					display: none;
+				}
+			}
+
+			.service-icon {
+				transition: transform 0.5s ease;
+
+				&:hover {
+					transform: translateY(-10%);
+					cursor: pointer;
+				}
+			}
+
+			h3 {
+				padding: 1rem 0;
+				font-size: 1.2rem;
+				text-transform: uppercase;
+			}
+
+			p {
+				font-size: 15px;
+				font-weight: 500;
+				padding-bottom: 20px;
+			}
+
+			.info-btn {
+				color: $text-color;
+				position: relative;
+				font-size: 15px;
+				font-weight: 600;
+
+				&::before {
+					content: "";
+					position: absolute;
+					width: 35px;
+					height: 1.5px;
+					background-color: $text-color;
+					top: 0.6rem;
+					left: 100px;
+
+				}
+			}
+		}
+	}
+}
+
+
+// media
+
+@media (max-width: 576px) {
+	.services {
+		.content {
+			.info {
+				text-align: center;
+				width: 100%;
+			}
+		}
+	}
+}
